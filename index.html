@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>InternHub - Your Gateway to Professional Success</title>
+    <meta name="title" content="InternHub - Your Gateway to Professional Success">
+    <meta name="description" content="Find the perfect internship matching your skills and career goals. Connect with top companies, get mentorship, and kickstart your professional journey with InternHub.">
+    <meta name="keywords" content="internships, career development, student internships, professional training, mentorship, job search, career guidance">
+    <meta name="author" content="InternHub">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://internhub.com/">
+    <meta property="og:title" content="InternHub - Your Gateway to Professional Success">
+    <meta property="og:description" content="Find the perfect internship matching your skills and career goals. Connect with top companies, get mentorship, and kickstart your professional journey.">
+    <meta property="og:image" content="https://internhub.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://internhub.com/">
+    <meta property="twitter:title" content="InternHub - Your Gateway to Professional Success">
+    <meta property="twitter:description" content="Find the perfect internship matching your skills and career goals. Connect with top companies, get mentorship, and kickstart your professional journey.">
+    <meta property="twitter:image" content="https://internhub.com/twitter-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0F0F0F">
+
+    <!-- Modern CSS Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Modern Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor cursor-dot"></div>
+    <div class="custom-cursor"></div>
+    <div class="page-transition"></div>
+
+    <!-- Modern Navbar -->
+    <nav class="fixed w-full p-2 z-50">
+        <div class="navbar-fixed">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between items-center h-16">
+                    <a href="#home" class="navbar-brand text-xl">InternHub</a>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#about" class="navbar-link">About</a>
+                        <a href="#team" class="navbar-link">Team</a>
+                        <a href="#stats" class="navbar-link">Stats</a>
+                        <a href="#testimonials" class="navbar-link">Testimonials</a>
+                        <a href="#pricing" class="navbar-link">Pricing</a>
+                        <a href="#contact" class="navbar-link">Contact</a>
+                    </div>
+                    <button class="md:hidden text-white" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                        <i class="fas fa-adjust"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-800/95 z-40 hidden animate-fade-in">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#about" class="text-white text-xl" onclick="toggleMenu()">About</a>
+            <a href="#team" class="text-white text-xl" onclick="toggleMenu()">Team</a>
+            <a href="#stats" class="text-white text-xl" onclick="toggleMenu()">Stats</a>
+            <a href="#testimonials" class="text-white text-xl" onclick="toggleMenu()">Testimonials</a>
+            <a href="#pricing" class="text-white text-xl" onclick="toggleMenu()">Pricing</a>
+            <a href="#contact" class="text-white text-xl" onclick="toggleMenu()">Contact</a>
+            <button onclick="toggleMenu()" class="absolute top-4 right-4 text-white">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section full-screen text-white" id="home">
+        <div class="text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                Take your First Step towards a Successful Career
+            </h1>
+            <p class="text-xl mb-8">Stop wasting your valuable time with the websites that aren't meant for you.</p>
+            <a href="#about" class="bg-white text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition duration-300">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-24 dark-section full-screen" id="about">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
+                Empowering Your Career Journey
+            </h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+                We connect ambitious students with meaningful internship opportunities, providing the tools and support needed to launch successful careers.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="feature-card">
+                <i class="fas fa-list-alt feature-icon"></i>
+                <h3 class="feature-title">Internship Listings</h3>
+                <p class="feature-description">
+                    Access a curated selection of internships across various industries, carefully vetted to ensure quality opportunities aligned with your career goals.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-puzzle-piece feature-icon"></i>
+                <h3 class="feature-title">Skill-Based Matching</h3>
+                <p class="feature-description">
+                    Our intelligent matching system connects you with internships that perfectly align with your skills, experience, and career aspirations.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-users feature-icon"></i>
+                <h3 class="feature-title">Mentorship Program</h3>
+                <p class="feature-description">
+                    Receive guidance from industry professionals who provide valuable insights, feedback, and support throughout your internship journey.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3 class="feature-title">Secure Platform</h3>
+                <p class="feature-description">
+                    Your safety is our priority. We maintain strict standards and protocols to ensure a secure and professional environment for all users.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mt-16">
+            <a href="#pricing" class="dark-button">
+                Start Your Journey
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Team Section -->
+<section class="py-24 dark-section-alt full-screen" id="team">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
+                Meet Our Team
+            </h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+                A dedicated group of professionals committed to helping students launch their careers
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <div class="team-image-container">
+                    <img src="a.jpeg" alt="Ayush Kumar" class="team-image">
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Ayush Kumar</h3>
+                    <p class="team-role">CEO & Founder</p>
+                    <p class="text-sm text-gray-400">Visionary leader with 10+ years of experience in tech education</p>
+                    <div class="team-social">
+                        <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="team-social-link"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <div class="team-image-container">
+                    <img src="g.jpeg" alt="Grishma Thakare" class="team-image">
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Grishma Thakare</h3>
+                    <p class="team-role">Head of Operations</p>
+                    <p class="text-sm text-gray-400">Expert in streamlining processes and student success</p>
+                    <div class="team-social">
+                        <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="team-social-link"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <div class="team-image-container">
+                    <img src="n.jpeg" alt="Nupur Bhoir" class="team-image">
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Nupur Bhoir</h3>
+                    <p class="team-role">VP of Sales</p>
+                    <p class="text-sm text-gray-400">Building partnerships with leading companies globally</p>
+                    <div class="team-social">
+                        <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="team-social-link"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-card">
+                <div class="team-image-container">
+                    <img src="m.jpeg" alt="Manthan Bhosale" class="team-image">
+                </div>
+                <div class="team-content">
+                    <h3 class="team-name">Manthan Bhosale</h3>
+                    <p class="team-role">CTO & Co-Founder</p>
+                    <p class="text-sm text-gray-400">Tech innovator driving platform development</p>
+                    <div class="team-social">
+                        <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="team-social-link"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Stats Section -->
+<section class="dark-section text-white py-24 full-screen" id="stats">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
+                Our Impact in Numbers
+            </h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+                Transforming careers and creating opportunities for students across India
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="stats-card">
+                <div class="stats-number" data-target="47">0</div>
+                <p class="stats-label">Partner Companies</p>
+                <p class="text-sm text-gray-400 mt-2">Top-tier companies actively hiring interns</p>
+            </div>
+
+            <div class="stats-card">
+                <div class="stats-number" data-target="1500">0</div>
+                <p class="stats-label">Successful Placements</p>
+                <p class="text-sm text-gray-400 mt-2">Students placed in their dream internships</p>
+            </div>
+
+            <div class="stats-card">
+                <div class="stats-number" data-target="6">0</div>
+                <p class="stats-label">Month Average Duration</p>
+                <p class="text-sm text-gray-400 mt-2">Extended learning and hands-on experience</p>
+            </div>
+
+            <div class="stats-card">
+                <div class="stats-number" data-target="10000">0</div>
+                <p class="stats-label">Minimum Stipend (₹)</p>
+                <p class="text-sm text-gray-400 mt-2">Ensuring fair compensation for all interns</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+<section class="py-24 dark-section-alt full-screen" id="testimonials">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
+                What Our Students Say
+            </h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+                Real stories from students who found their dream internships through InternHub
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">Finding an internship that aligned with my career goals was a daunting task. But InternHub made it incredibly easy. Their platform provided a wide range of opportunities, and their expert guidance helped me land my dream internship.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="Anika Patel">
+                    </div>
+                    <div class="testimonial-info">
+                        <div class="testimonial-name">Anika Patel</div>
+                        <div class="testimonial-role">Computer Science Major</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">Beyond just job listings, InternHub fosters a supportive community. I connected with like-minded peers and industry professionals, which significantly enhanced my internship experience.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://i.pravatar.cc/150?img=2" alt="Ravi Kumar">
+                    </div>
+                    <div class="testimonial-info">
+                        <div class="testimonial-name">Ravi Kumar</div>
+                        <div class="testimonial-role">Marketing Major</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">From application to onboarding, InternHub streamlined the entire process. Their dedicated support team was always available to answer my questions and provide valuable advice.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://i.pravatar.cc/150?img=3" alt="Priya Singh">
+                    </div>
+                    <div class="testimonial-info">
+                        <div class="testimonial-name">Priya Singh</div>
+                        <div class="testimonial-role">Finance Major</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">My internship through InternHub was a game-changer. It provided hands-on experience, valuable mentorship, and a strong professional network. I'm grateful for the opportunities this platform has opened up.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">
+                        <img src="https://i.pravatar.cc/150?img=4" alt="Arjun Sharma">
+                    </div>
+                    <div class="testimonial-info">
+                        <div class="testimonial-name">Arjun Sharma</div>
+                        <div class="testimonial-role">Engineering Major</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Pricing Section -->
+<section class="py-24 dark-section" id="pricing">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
+                Simple, Transparent Pricing
+            </h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+                Choose the perfect plan to kickstart your career journey
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Free Plan -->
+            <div class="col-span-1">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-title">Free Plan</div>
+                        <div class="pricing-price">₹0</div>
+                        <div class="pricing-duration">per month</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>10 Applications per Week</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Standard Application Review</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Placement within 60 Days</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Group Career Sessions</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Basic Resume Support</span>
+                        </div>
+                    </div>
+                    <button class="pricing-button">
+                        Get Started Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Standard Plan -->
+            <div class="col-span-1">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-title">Standard Plan</div>
+                        <div class="pricing-price">₹149</div>
+                        <div class="pricing-duration">per month</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>28 Applications per Week</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Priority Application Review</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Placement within 30 Days</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>1-on-1 Career Guidance</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Resume Building Support</span>
+                        </div>
+                    </div>
+                    <button class="pricing-button">
+                        Get Started Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Advanced Plan -->
+            <div class="col-span-1">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-title">Advanced Plan</div>
+                        <div class="pricing-price">₹199</div>
+                        <div class="pricing-duration">per month</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>50 Applications per Week</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Dedicated Application Manager</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Immediate Placement Assistance</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personalized Career Coaching</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Advanced Resume Optimization</span>
+                        </div>
+                    </div>
+                    <button class="pricing-button">
+                        Get Started Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+<section class="py-24 dark-section-alt" id="contact">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
+                Get in Touch
+            </h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+                Have questions? We're here to help and provide more information
+            </p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Mumbai, India</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">+91 9876543289</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">internhub@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <form action="/action_page.php" target="_blank" class="space-y-6">
+                <div class="form-grid">
+                    <div class="float-label">
+                        <input type="text" required name="Name" placeholder=" ">
+                        <label>Full Name</label>
+                    </div>
+                    <div class="float-label">
+                        <input type="email" required name="Email" placeholder=" ">
+                        <label>Email Address</label>
+                    </div>
+                    <div class="float-label">
+                        <input type="text" required name="Message" placeholder=" ">
+                        <label>Your Message</label>
+                    </div>
+                </div>
+                <button type="submit" class="contact-button">
+                    <span class="flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+<footer class="footer-container">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>About InternHub</h3>
+                <p class="text-gray-400 mb-4">
+                    Connecting ambitious students with meaningful internship opportunities. Your gateway to professional success.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#team"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    <li><a href="#pricing"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://maps.google.com" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> Mumbai, India
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+919876543289">
+                            <i class="fas fa-phone"></i> +91 9876543289
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:internhub@gmail.com">
+                            <i class="fas fa-envelope"></i> internhub@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest opportunities and updates.</p>
+                <form class="flex gap-2">
+                    <input type="email" placeholder="Your email" class="dark-input flex-1" required>
+                    <button type="submit" class="dark-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 InternHub. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.width = `${scrolled}%`;
+            
+            // Show/hide scroll to top button
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Scroll to Top functionality
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add loading animation to images
+        document.querySelectorAll('img').forEach(img => {
+            img.classList.add('loading');
+            img.onload = () => img.classList.remove('loading');
+        });
+
+        // Stats Counter Animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50; // Adjust speed here
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 20);
+        }
+
+        // Intersection Observer for stats
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-count');
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    animateCounter(entry.target, target);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stats-number').forEach((stat) => {
+            statsObserver.observe(stat);
+        });
+
+        // Custom Cursor
+        const cursors = document.querySelectorAll('.custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursors.forEach(cursor => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+        });
+
+        // Scroll Animations
+        const fadeUpElements = document.querySelectorAll('.fade-up');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeUpElements.forEach(element => fadeObserver.observe(element));
+
+        // Interactive Cards
+        document.querySelectorAll('.interactive-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const xRotation = ((y - rect.height / 2) / rect.height) * 10;
+                const yRotation = ((x - rect.width / 2) / rect.width) * 10;
+                
+                card.style.transform = `
+                    perspective(1000px)
+                    rotateX(${xRotation}deg)
+                    rotateY(${yRotation}deg)
+                `;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        // Add loading state to async operations
+        const addLoadingState = (element) => {
+            element.classList.add('loading-state');
+            element.disabled = true;
+            setTimeout(() => {
+                element.classList.remove('loading-state');
+                element.disabled = false;
+            }, 1000);
+        };
+
+        // Apply to buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => addLoadingState(button));
+        });
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
+</body>
+</html>
