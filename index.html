@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Primary Meta Tags -->
     <title>InternHub - Your Gateway to Professional Success</title>
@@ -43,6 +43,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
+    <!-- Add responsive CSS framework -->
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" rel="stylesheet">
 </head>
 <body class="bg-black">
     <!-- Scroll Progress Bar -->
@@ -56,38 +58,56 @@
     <!-- Modern Navbar -->
     <nav class="fixed w-full p-2 z-50">
         <div class="navbar-fixed">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="flex justify-between items-center h-16">
-                    <a href="#home" class="navbar-brand text-xl">InternHub</a>
-                    <div class="hidden md:flex space-x-8">
+            <div class="container mx-auto">
+                <div class="flex items-center justify-between">
+                    <a href="#home" class="navbar-brand">
+                        InternHub
+                    </a>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-8">
                         <a href="#about" class="navbar-link">About</a>
                         <a href="#team" class="navbar-link">Team</a>
                         <a href="#stats" class="navbar-link">Stats</a>
                         <a href="#testimonials" class="navbar-link">Testimonials</a>
                         <a href="#pricing" class="navbar-link">Pricing</a>
                         <a href="#contact" class="navbar-link">Contact</a>
+                        <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                            <i class="fas fa-adjust"></i>
+                        </button>
                     </div>
-                    <button class="md:hidden text-white" onclick="toggleMenu()">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-                        <i class="fas fa-adjust"></i>
-                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="flex items-center md:hidden gap-4">
+                        <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                            <i class="fas fa-adjust"></i>
+                        </button>
+                        <button 
+                            class="mobile-menu-button"
+                            aria-label="Toggle menu"
+                            onclick="toggleMenu()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-gray-800/95 z-40 hidden animate-fade-in">
-        <div class="flex flex-col items-center justify-center h-full space-y-8">
-            <a href="#about" class="text-white text-xl" onclick="toggleMenu()">About</a>
-            <a href="#team" class="text-white text-xl" onclick="toggleMenu()">Team</a>
-            <a href="#stats" class="text-white text-xl" onclick="toggleMenu()">Stats</a>
-            <a href="#testimonials" class="text-white text-xl" onclick="toggleMenu()">Testimonials</a>
-            <a href="#pricing" class="text-white text-xl" onclick="toggleMenu()">Pricing</a>
-            <a href="#contact" class="text-white text-xl" onclick="toggleMenu()">Contact</a>
-            <button onclick="toggleMenu()" class="absolute top-4 right-4 text-white">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="container h-full">
+            <div class="mobile-menu-content flex flex-col items-center justify-center h-full">
+                <a href="#about" class="text-white text-xl mb-8" onclick="toggleMenu()">About</a>
+                <a href="#team" class="text-white text-xl mb-8" onclick="toggleMenu()">Team</a>
+                <a href="#stats" class="text-white text-xl mb-8" onclick="toggleMenu()">Stats</a>
+                <a href="#testimonials" class="text-white text-xl mb-8" onclick="toggleMenu()">Testimonials</a>
+                <a href="#pricing" class="text-white text-xl mb-8" onclick="toggleMenu()">Pricing</a>
+                <a href="#contact" class="text-white text-xl mb-8" onclick="toggleMenu()">Contact</a>
+            </div>
+            <button 
+                onclick="toggleMenu()" 
+                class="absolute top-6 right-6 text-white p-2 rounded-lg bg-gray-800">
                 <i class="fas fa-times text-2xl"></i>
             </button>
         </div>
@@ -95,20 +115,22 @@
 
     <!-- Hero Section -->
     <section class="hero-section full-screen text-white" id="home">
-        <div class="text-center px-4">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                Take your First Step towards a Successful Career
-            </h1>
-            <p class="text-xl mb-8">Stop wasting your valuable time with the websites that aren't meant for you.</p>
-            <a href="#about" class="bg-white text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition duration-300">
-                Learn More
-            </a>
+        <div class="container">
+            <div class="text-center px-4">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                    Take your First Step towards a Successful Career
+                </h1>
+                <p class="text-xl mb-8">Stop wasting your valuable time with the websites that aren't meant for you.</p>
+                <a href="#about" class="bg-white text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition duration-300">
+                    Learn More
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-24 dark-section full-screen" id="about">
-    <div class="max-w-7xl mx-auto px-4">
+    <section class="py-24 dark-section" id="about">
+    <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
                 Empowering Your Career Journey
@@ -119,7 +141,7 @@
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="feature-card">
+            <div class="feature-card padding-fluid">
                 <i class="fas fa-list-alt feature-icon"></i>
                 <h3 class="feature-title">Internship Listings</h3>
                 <p class="feature-description">
@@ -127,7 +149,7 @@
                 </p>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card padding-fluid">
                 <i class="fas fa-puzzle-piece feature-icon"></i>
                 <h3 class="feature-title">Skill-Based Matching</h3>
                 <p class="feature-description">
@@ -135,7 +157,7 @@
                 </p>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card padding-fluid">
                 <i class="fas fa-users feature-icon"></i>
                 <h3 class="feature-title">Mentorship Program</h3>
                 <p class="feature-description">
@@ -143,7 +165,7 @@
                 </p>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card padding-fluid">
                 <i class="fas fa-shield-alt feature-icon"></i>
                 <h3 class="feature-title">Secure Platform</h3>
                 <p class="feature-description">
@@ -160,9 +182,12 @@
     </div>
 </section>
 
-    <!-- Team Section -->
-<section class="py-24 dark-section-alt full-screen" id="team">
-    <div class="max-w-7xl mx-auto px-4">
+<!-- Add a separator div -->
+<div class="h-16"></div>
+
+<!-- Team Section -->
+<section class="py-24 dark-section-alt" id="team">
+    <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
                 Meet Our Team
@@ -246,7 +271,7 @@
 
     <!-- Stats Section -->
 <section class="dark-section text-white py-24 full-screen" id="stats">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
                 Our Impact in Numbers
@@ -284,9 +309,12 @@
     </div>
 </section>
 
-    <!-- Testimonials Section -->
-<section class="py-24 dark-section-alt full-screen" id="testimonials">
-    <div class="max-w-7xl mx-auto px-4">
+<!-- Add separator before testimonials -->
+<div class="section-separator"></div>
+
+<!-- Testimonials Section -->
+<section class="py-24 dark-section-alt" id="testimonials">
+    <div class="container mx-auto px-4 py-16"> <!-- Added vertical padding -->
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
                 What Our Students Say
@@ -360,9 +388,12 @@
     </div>
 </section>
 
+<!-- Add separator after testimonials -->
+<div class="section-separator"></div>
+
     <!-- Pricing Section -->
 <section class="py-24 dark-section" id="pricing">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
                 Simple, Transparent Pricing
@@ -486,7 +517,7 @@
 
     <!-- Contact Section -->
 <section class="py-24 dark-section-alt" id="contact">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-600">
                 Get in Touch
@@ -529,7 +560,7 @@
                 </div>
             </div>
 
-            <form action="/action_page.php" target="_blank" class="space-y-6">
+            <form action="/action_page.php" target="_blank" class="contact-form grid gap-fluid">
                 <div class="form-grid">
                     <div class="float-label">
                         <input type="text" required name="Name" placeholder=" ">
